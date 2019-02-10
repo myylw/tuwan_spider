@@ -9,8 +9,8 @@ GET方法请求这个链接会返回所有缩略图的地址
   
 例如这个缩略图链接http://img4.tuwandata.com/v3/thumb/jpg/OTE2YSwxNTgsMTU4LDksMywxLC0xLE5PTkUsLCw5MA==/u/GLDM9lMIBglnFv7YKftLBuURdOZOq8F9aPuqHgeODGD3E0OBJHaqkDtBsl7jkI23En0ctPY5sIUhzMP7z6wBniMfIhHZyHc32vaywkFlyGWn.jpg"  
 中间的OTE2YSwxNTgsMTU4LDksMywxLC0xLE5PTkUsLCw5MA==这个路径后面的==暴露了他经过过base64 encode  
-decode该字符串后有得到这么几个参数['1e45', '158', '158', '9', '3', '1', '-1', 'NONE', '', '', '90']
-第1,2个参数是图片的大小,直接换成0,0再b64encode组装回去就能请求到原图.......
-['1e45', '0', '0', '9', '3', '1', '-1', 'NONE', '', '', '90']
+decode该字符串后有得到这么几个参数['1e45', '158', '158', '9', '3', '1', '-1', 'NONE', '', '', '90']  
+第1,2个参数是图片的大小,直接换成0,0再b64encode组装回去就能请求到原图.......  
+['1e45', '0', '0', '9', '3', '1', '-1', 'NONE', '', '', '90']  
 
 这个api好像没有任何反爬机制,UA不改不拦截,多线程协程并发请求不拦截,无需设置随机访问间隔  
